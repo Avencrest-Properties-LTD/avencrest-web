@@ -60,6 +60,19 @@ a {
     white-space: nowrap;
 }
 
+.header-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-brand img {
+    display: block;
+    width: 72px;
+    height: 62px;
+    object-fit: contain;
+}
+
 .menu-toggle {
     display: none;
 }
@@ -403,6 +416,19 @@ a {
 
     .site-header .brand-name {
         font-size: 22px;
+    }
+
+    .header-brand {
+        gap: 0;
+    }
+
+    .header-brand img {
+        width: 60px;
+        height: 52px;
+    }
+
+    .header-brand span {
+        display: none;
     }
 
     .header-navigation {
