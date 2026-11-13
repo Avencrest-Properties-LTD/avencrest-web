@@ -61,6 +61,47 @@ async function loadNavbar() {
     });
 }
 
+function initializeHeroParallax() {
+    const hero = document.querySelector(".hero-section");
+    const clouds = document.querySelector(".hero-cloud-layer");
+    const content = document.querySelector(".hero-content");
+
+    if (!hero || !clouds || !content) {
+        return;
+    }
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let frameRequested = false;
+
+    const updateParallax = () => {
+        frameRequested = false;
+
+        if (reduceMotion.matches) {
+            clouds.style.removeProperty("--hero-cloud-offset");
+            content.style.removeProperty("--hero-content-offset");
+            return;
+        }
+
+        const scrolled = Math.max(0, -hero.getBoundingClientRect().top);
+        clouds.style.setProperty("--hero-cloud-offset", `${Math.min(scrolled * 0.22, 110)}px`);
+        content.style.setProperty("--hero-content-offset", `${Math.max(-scrolled * 0.16, -80)}px`);
+    };
+
+    const requestParallaxUpdate = () => {
+        if (!frameRequested) {
+            frameRequested = true;
+            window.requestAnimationFrame(updateParallax);
+        }
+    };
+
+    window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+    window.addEventListener("resize", requestParallaxUpdate);
+    reduceMotion.addEventListener("change", requestParallaxUpdate);
+    requestParallaxUpdate();
+}
+
 loadNavbar().catch((error) => {
     console.error("Could not load the site navbar.", error);
 });
+
+initializeHeroParallax();
