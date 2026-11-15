@@ -99,6 +99,9 @@ a {
     flex: 1;
     place-items: start center;
     overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(42, 133, 154, 0.88) 0%, rgba(52, 141, 160, 0.78) 44%, rgba(75, 153, 170, 0.52) 62%, rgba(111, 177, 186, 0.12) 76%, transparent 84%),
+        url("assets/duplexwth 2black cars.jpg") center / cover no-repeat;
     text-align: center;
 }
 
@@ -328,14 +331,10 @@ a {
 .site-footer {
     position: relative;
     isolation: isolate;
-    width: calc(100% - 16px);
-    margin-top: auto;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    margin-left: 8px;
+    width: 100%;
+    margin: 0;
     min-height: 345px;
     overflow: hidden;
-    border-radius: 17px;
     background: var(--color-brand);
 }
 
@@ -371,7 +370,7 @@ a {
 .brand-description {
     margin: 15px 0 0;
     color: var(--color-text);
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 300;
     line-height: 1.52;
 }
@@ -383,7 +382,7 @@ a {
 .social-label {
     margin: 0 0 8px;
     color: var(--color-muted);
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 400;
 }
 
@@ -397,8 +396,8 @@ a {
 
 .social-links a {
     display: grid;
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
     place-items: center;
     border-radius: 3px;
     background: var(--color-gold);
@@ -420,8 +419,8 @@ a {
 
 .social-links svg {
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     fill: currentColor;
 }
 
@@ -435,7 +434,7 @@ a {
 .link-group h2 {
     margin: 0 0 10px;
     color: var(--color-gold);
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.4;
     text-transform: uppercase;
@@ -451,7 +450,7 @@ a {
 
 .link-group a {
     color: var(--color-text);
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 300;
     line-height: 1.35;
     text-decoration: none;
@@ -466,7 +465,7 @@ a {
     grid-column: 2;
     margin: 0;
     color: #91A9A1;
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 300;
     text-align: right;
 }
@@ -519,19 +518,19 @@ a {
 
     .brand-description,
     .link-group a {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .social-label {
-        font-size: 9px;
+        font-size: 14px;
     }
 
     .link-group h2 {
-        font-size: 7px;
+        font-size: 12px;
     }
 
     .footer-copyright {
-        font-size: 7px;
+        font-size: 12px;
     }
 }
 
@@ -581,6 +580,7 @@ a {
     .hero-section {
         min-height: max(620px, calc(100svh - 130px));
         padding: 32px 20px 72px;
+        background: url("assets/duplexwth 2black cars.jpg") center / cover no-repeat;
     }
 
     .hero-cloud-layer {
@@ -726,8 +726,7 @@ a {
     }
 
     .site-footer {
-        width: calc(100% - 16px);
-        margin: auto 8px 8px;
+        width: 100%;
         min-height: 0;
         border-radius: 0;
     }
@@ -735,7 +734,6 @@ a {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 32px;
-        padding: 32px 26px 128px;
     }
 
     .brand-name {
@@ -745,7 +743,7 @@ a {
     .brand-description {
         max-width: 340px;
         margin-top: 12px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.6;
     }
 
@@ -759,7 +757,7 @@ a {
 
     .social-label {
         margin-bottom: 10px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .social-links {
@@ -784,7 +782,7 @@ a {
 
     .link-group h2 {
         margin-bottom: 12px;
-        font-size: 9px;
+        font-size: 11px;
     }
 
     .link-group ul {
@@ -792,13 +790,13 @@ a {
     }
 
     .link-group a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .footer-copyright {
         grid-column: 1;
         margin-top: 0;
-        font-size: 9px;
+        font-size: 11px;
         text-align: left;
     }
 
@@ -829,7 +827,7 @@ a {
     }
 
     .link-group a {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 
