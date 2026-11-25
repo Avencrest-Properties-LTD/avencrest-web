@@ -1,57 +1,22 @@
-import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import HomePage from './pages/HomePage';
-import PropertiesPage from './pages/PropertiesPage';
-import PropertyDetailsPage from './pages/PropertyDetailsPage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import ShortlistPage from './pages/ShortlistPage';
-import './utils/gsapConfig';
+import { Container, Button } from './components/ui';
 
-gsap.registerPlugin(ScrollTrigger);
-
-function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-      wheelMultiplier: 0.9,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    const animationFrameId = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      lenis.destroy();
-    };
-  }, []);
-
+export default function App() {
   return (
-    <div className="app-shell">
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/properties" element={<PropertiesPage />} />
-          <Route path="/properties/:slug" element={<PropertyDetailsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/shortlist" element={<ShortlistPage />} />
-        </Routes>
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-surface font-sans text-ink">
+      <Container className="py-16 text-center">
+        <h1 className="font-display text-4xl font-bold text-primary sm:text-5xl">
+          Avencrest Clean Slate
+        </h1>
+        <p className="mx-auto mt-4 max-w-lg text-sm text-muted">
+          All page code has been reset. Reusable UI components, assets, and Tailwind CSS configurations are ready.
+        </p>
+        <div className="mt-8 flex justify-center gap-4">
+          <Button variant="primary">Primary Action</Button>
+          <Button variant="outline" className="!border-primary !text-primary hover:!bg-primary/5">
+            Outline Action
+          </Button>
+        </div>
+      </Container>
     </div>
   );
 }
-
-export default App;
