@@ -66,3 +66,71 @@ body,
   width: min(1200px, calc(100% - 32px));
   margin-inline: auto;
 }
+
+/* Avencrest logo global loader animations */
+@keyframes av-logo-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes av-logo-shimmer {
+  0% {
+    transform: translateX(-140%) skewX(-22deg);
+  }
+  65%, 100% {
+    transform: translateX(240%) skewX(-22deg);
+  }
+}
+
+@keyframes av-ring-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes av-ring-spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes av-progress-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.av-logo-float {
+  animation: av-logo-float 2.6s ease-in-out infinite;
+}
+
+.av-logo-shimmer {
+  animation: av-logo-shimmer 2.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.av-ring-spin {
+  transform-origin: center;
+  animation: av-ring-spin 7s linear infinite;
+}
+
+.av-ring-spin-reverse {
+  transform-origin: center;
+  animation: av-ring-spin-reverse 10s linear infinite;
+}
+
+.av-progress-bar {
+  animation: av-progress-sweep 1.5s ease-in-out infinite;
+}
