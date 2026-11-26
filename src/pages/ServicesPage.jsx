@@ -281,9 +281,12 @@ export default function ServicesPage() {
               Architecture, development, construction, and project management—all
               delivered from a single integrated team. One relationship, every stage.
             </p>
-            <div className="mt-8">
-              <Button variant="white" to="/contact">
-                Book a consultation
+            <div className="mt-8 flex flex-col gap-3.5 sm:items-start sm:gap-4">
+              <Button variant="white" to="/projects" className="!rounded-none">
+                Explore our expertise
+              </Button>
+              <Button variant="ghost-light" to="/contact" className="!rounded-none">
+                Start a conversation
               </Button>
             </div>
           </div>
