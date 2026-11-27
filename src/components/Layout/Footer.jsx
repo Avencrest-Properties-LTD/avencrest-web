@@ -6,6 +6,7 @@ const EXPLORE_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about' },
   { label: 'Services', to: '/services' },
+  { label: 'Invest', to: '/invest' },
 ];
 
 const PORTFOLIO_LINKS = [
@@ -15,8 +16,9 @@ const PORTFOLIO_LINKS = [
 ];
 
 const CONNECT_LINKS = [
-  { label: 'Instagram', href: 'https://instagram.com', external: true },
-  { label: 'LinkedIn', href: 'https://linkedin.com', external: true },
+  { label: 'Instagram', href: 'https://www.instagram.com/avencrestintegrated/',external: true },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61596527733211',external: true },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@avencrestproperties',external: true },
   { label: 'hello@avencrest.com', href: 'mailto:hello@avencrest.com', external: false },
 ];
 
@@ -127,7 +129,7 @@ export default function Footer() {
         aria-hidden="true"
         className="pointer-events-none relative z-10 mt-14 select-none overflow-hidden text-center lg:mt-16"
       >
-        <p className="whitespace-nowrap font-display text-[12.2vw] font-normal uppercase leading-[0.85] tracking-[-0.03em] text-[#6E7A70] sm:text-[13vw] lg:-mb-[1.2vw] lg:text-[13.5vw] lg:leading-[0.82]">
+        <p className="whitespace-nowrap font-display text-[15.5vw] font-normal uppercase leading-[0.85] tracking-[-0.03em] text-white/40 sm:text-[13vw] sm:text-[#6E7A70] lg:-mb-[1.2vw] lg:text-[13.5vw] lg:leading-[0.82]">
           AVENCREST
         </p>
       </div>

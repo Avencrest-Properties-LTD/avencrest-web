@@ -10,6 +10,7 @@ const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
 const WorksPage = lazy(() => import('./pages/WorksPage'));
 const DevelopmentsPage = lazy(() => import('./pages/DevelopmentsPage'));
+const InvestPage = lazy(() => import('./pages/InvestPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/projects/:id" element={<ProjectDetailPage />} />
             <Route path="/works" element={<WorksPage />} />
             <Route path="/developments" element={<DevelopmentsPage />} />
+            <Route path="/invest" element={<InvestPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
